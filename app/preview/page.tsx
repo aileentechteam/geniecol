@@ -11,6 +11,12 @@ const experiments = [
     path: '/preview/home-v5',
     description: 'The lone non-centered outlier kept for comparison.',
   },
+  {
+    title: 'Crest test',
+    status: 'Utility',
+    path: '/preview/crest-test',
+    description: 'Side-by-side comparison of the reference image, original SVG, and thicker outline SVG.',
+  },
 ]
 
 export default function PreviewIndexPage() {

@@ -936,3 +936,85 @@ img {
     font-size: 26px;
   }
 }
+
+.crest-test-shell {
+  min-height: 100vh;
+  padding: 40px 24px 56px;
+  background: #000;
+  color: #fff;
+}
+
+.crest-test-header {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.crest-test-title {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.02;
+}
+
+.crest-test-copy {
+  margin: 18px auto 0;
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.crest-test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 46px auto 0;
+}
+
+.crest-test-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.crest-test-label {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.crest-test-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.crest-test-stage-image {
+  padding: 0;
+}
+
+.crest-test-reference,
+.crest-test-crest {
+  max-width: 100%;
+  height: auto;
+}
+
+.crest-test-crest {
+  width: 240px;
+}
+
+@media (max-width: 809px) {
+  .crest-test-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .crest-test-stage {
+    min-height: 300px;
+  }
+}
