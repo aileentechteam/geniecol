@@ -1,27 +1,33 @@
 const experiments = [
   {
-    title: 'Home v1 · Editorial Statement',
-    status: 'Ready',
-    path: '/preview/home-v1',
-    description: 'Centered poster-style homepage inspired most directly by your reference graphic.',
-  },
-  {
-    title: 'Home v2 · Split Narrative',
-    status: 'Ready',
-    path: '/preview/home-v2',
-    description: 'Left-copy/right-campaign layout with a more modern web feel.',
-  },
-  {
-    title: 'Home v3 · Campaign Archive',
-    status: 'Ready',
-    path: '/preview/home-v3',
-    description: 'Proof-first layout that treats the homepage like a curated portfolio.',
-  },
-  {
     title: 'Home v4 · Luxury Minimal',
-    status: 'Ready',
+    status: 'Kept',
     path: '/preview/home-v4',
-    description: 'Ultra-minimal landing page with maximum negative space and restraint.',
+    description: 'Your current favorite: restrained, centered, and very sparse.',
+  },
+  {
+    title: 'Home v5 · Left Aligned Statement',
+    status: 'New',
+    path: '/preview/home-v5',
+    description: 'Minimal but less formal: a stronger editorial left-aligned composition.',
+  },
+  {
+    title: 'Home v6 · Framed Statement',
+    status: 'New',
+    path: '/preview/home-v6',
+    description: 'A contained luxury layout with a single high-trust message block.',
+  },
+  {
+    title: 'Home v7 · Stacked Manifesto',
+    status: 'New',
+    path: '/preview/home-v7',
+    description: 'Vertical, fashion-editorial structure with a slightly stronger point of view.',
+  },
+  {
+    title: 'Home v8 · Monument',
+    status: 'New',
+    path: '/preview/home-v8',
+    description: 'A dramatic centered direction with a stronger brand-mark presence.',
   },
 ]
 
@@ -33,7 +39,7 @@ export default function PreviewIndexPage() {
           <div className="preview-kicker">Password-protected</div>
           <h1 className="preview-title">Genie Collective staging area</h1>
           <p className="preview-copy">
-            This is where I’ll put design explorations before anything touches production.
+            Current batch: five minimalist homepage options, refined around the luxury direction you liked best.
           </p>
         </div>
         <a className="preview-production-link" href="/">
