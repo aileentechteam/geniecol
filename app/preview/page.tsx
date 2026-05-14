@@ -17,6 +17,12 @@ const experiments = [
     path: '/preview/crest-test',
     description: 'Side-by-side comparison of the reference image, original SVG, and thicker outline SVG.',
   },
+  {
+    title: 'Wish button test',
+    status: 'Utility',
+    path: '/preview/button-test',
+    description: 'Animated grayscale smoke button with slow luxurious motion.',
+  },
 ]
 
 export default function PreviewIndexPage() {
