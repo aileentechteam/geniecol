@@ -1,21 +1,27 @@
 const experiments = [
   {
-    title: 'Homepage hero concepts',
-    status: 'Ready for iteration',
-    path: '/preview',
-    description: 'We can place multiple homepage directions here for side-by-side review.',
+    title: 'Home v1 · Editorial Statement',
+    status: 'Ready',
+    path: '/preview/home-v1',
+    description: 'Centered poster-style homepage inspired most directly by your reference graphic.',
   },
   {
-    title: 'About / story page',
-    status: 'Placeholder',
-    path: '/preview/about-v1',
-    description: 'Reserved for the first narrative brand page once you want it.',
+    title: 'Home v2 · Split Narrative',
+    status: 'Ready',
+    path: '/preview/home-v2',
+    description: 'Left-copy/right-campaign layout with a more modern web feel.',
   },
   {
-    title: 'Services / offering page',
-    status: 'Placeholder',
-    path: '/preview/services-v1',
-    description: 'Reserved for offer structure, positioning, and conversion experiments.',
+    title: 'Home v3 · Campaign Archive',
+    status: 'Ready',
+    path: '/preview/home-v3',
+    description: 'Proof-first layout that treats the homepage like a curated portfolio.',
+  },
+  {
+    title: 'Home v4 · Luxury Minimal',
+    status: 'Ready',
+    path: '/preview/home-v4',
+    description: 'Ultra-minimal landing page with maximum negative space and restraint.',
   },
 ]
 
@@ -44,6 +50,9 @@ export default function PreviewIndexPage() {
             </div>
             <h2>{experiment.title}</h2>
             <p>{experiment.description}</p>
+            <a href={experiment.path} className="preview-card-link">
+              Open concept
+            </a>
           </article>
         ))}
       </section>
