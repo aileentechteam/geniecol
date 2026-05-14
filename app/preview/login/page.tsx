@@ -14,12 +14,18 @@ export default async function PreviewLoginPage({ searchParams }: LoginPageProps)
 
   return (
     <main className="preview-login-shell">
-      <div className="preview-login-card">
-        <div className="preview-kicker">Genie Collective staging</div>
-        <h1 className="preview-title">Private design review area</h1>
-        <p className="preview-copy">
-          New pages, experiments, and design directions will live here first. Production stays on
-          geniecol.com until you approve changes.
+      <div className="preview-login-card preview-login-card-branded">
+        <div className="preview-brand-crest-wrap">
+          <img className="preview-brand-crest" src="/brand/crest.svg" alt="Genie Collective crest" />
+        </div>
+
+        <img className="preview-brand-logo" src="/brand/logo-wordmark.svg" alt="Genie Collective" />
+
+        <p className="preview-copy preview-copy-centered">
+          private area. go away or email{' '}
+          <a href="mailto:wish@geniecol.com" className="preview-inline-link">
+            wish@geniecol.com
+          </a>
         </p>
 
         {setupMissing ? (
@@ -32,20 +38,17 @@ export default async function PreviewLoginPage({ searchParams }: LoginPageProps)
 
         <form className="preview-form" action="/api/preview-login" method="post">
           <input type="hidden" name="next" value={next} />
-          <label className="preview-label" htmlFor="password">
-            Password
-          </label>
           <input
             id="password"
             name="password"
             type="password"
             className="preview-input"
-            placeholder="Enter staging password"
+            placeholder="Password"
             autoComplete="current-password"
             required
           />
           <button className="preview-button" type="submit">
-            Enter staging
+            Enter
           </button>
         </form>
       </div>

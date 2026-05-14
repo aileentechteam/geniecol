@@ -154,6 +154,26 @@ img {
   padding: 32px;
 }
 
+.preview-login-card-branded {
+  text-align: center;
+}
+
+.preview-brand-crest-wrap {
+  width: 96px;
+  margin: 0 auto 24px;
+}
+
+.preview-brand-crest {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.preview-brand-logo {
+  width: min(100%, 240px);
+  margin: 0 auto;
+}
+
 .preview-kicker {
   margin-bottom: 12px;
   color: #9ba1a5;
@@ -176,15 +196,24 @@ img {
   line-height: 1.6;
 }
 
+.preview-copy-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.preview-inline-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.preview-inline-link:hover {
+  text-decoration: underline;
+}
+
 .preview-form {
   display: grid;
   gap: 12px;
   margin-top: 28px;
-}
-
-.preview-label {
-  font-size: 14px;
-  color: #d7dde0;
 }
 
 .preview-input {
@@ -216,6 +245,10 @@ img {
   font: inherit;
   font-weight: 600;
   text-decoration: none;
+}
+
+.preview-button {
+  width: 100%;
 }
 
 .preview-alert {
