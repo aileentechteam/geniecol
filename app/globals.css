@@ -127,9 +127,7 @@ img {
 .preview-shell {
   min-height: 100vh;
   padding: 40px 20px;
-  background:
-    radial-gradient(circle at top, rgba(190, 201, 209, 0.16), transparent 35%),
-    #131415;
+  background: #000;
   color: #fff;
 }
 
@@ -139,7 +137,6 @@ img {
   justify-content: center;
 }
 
-.preview-login-card,
 .preview-header,
 .preview-card {
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -150,8 +147,7 @@ img {
 
 .preview-login-card {
   width: min(100%, 520px);
-  border-radius: 28px;
-  padding: 32px;
+  padding: 32px 0;
 }
 
 .preview-login-card-branded {
@@ -218,9 +214,9 @@ img {
 
 .preview-input {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.04);
+  background: #000;
   color: #fff;
   padding: 14px 16px;
   font: inherit;
@@ -253,15 +249,12 @@ img {
 
 .preview-alert {
   margin-top: 20px;
-  border-radius: 14px;
-  padding: 12px 14px;
-  background: rgba(255, 92, 92, 0.12);
-  color: #ffd5d5;
+  padding: 12px 0;
+  color: #fff;
 }
 
 .preview-alert-warning {
-  background: rgba(255, 214, 102, 0.12);
-  color: #ffe8a6;
+  color: #fff;
 }
 
 .preview-shell {
