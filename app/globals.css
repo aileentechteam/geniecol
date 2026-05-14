@@ -754,6 +754,102 @@ img {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.concept-desktop-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.outlined-crest {
+  border: 2px solid #fff;
+  border-radius: 999px;
+  padding: 14px;
+}
+
+.concept-center-mark {
+  margin-top: 4vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.concept-center-crest {
+  width: 62px;
+  height: auto;
+}
+
+.concept-center-wordmark {
+  width: min(100%, 280px);
+  margin-top: 24px;
+}
+
+.concept-center-tagline {
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-secondary);
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+.concept-center-body {
+  max-width: 900px;
+  margin-top: 60px;
+}
+
+.concept-center-body h1 {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: clamp(42px, 5.4vw, 80px);
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.concept-center-body p {
+  max-width: 650px;
+  margin: 24px auto 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.concept-center-footer,
+.concept-lower-line-grid,
+.concept-monolith-footer,
+.concept-editorial-lines {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 28px;
+  width: min(100%, 1100px);
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.concept-center-body-splitline,
+.concept-center-body-narrow,
+.concept-monolith-copy,
+.concept-editorial-layers {
+  max-width: 860px;
+}
+
+.concept-gallery-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  width: min(100%, 1100px);
+  margin-top: 70px;
+}
+
+.concept-gallery-cell {
+  aspect-ratio: 3 / 4;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+}
+
 .preview-card-top {
   display: flex;
   align-items: center;
@@ -798,7 +894,8 @@ img {
   .concept-archive-grid,
   .concept-archive-lower,
   .concept-split-grid,
-  .concept-luxury-alt-grid {
+  .concept-luxury-alt-grid,
+  .concept-gallery-strip {
     grid-template-columns: 1fr;
   }
 
@@ -830,7 +927,12 @@ img {
 
   .concept-frame-box,
   .concept-stacked-copy,
-  .concept-monument-copy {
+  .concept-monument-copy,
+  .concept-center-body {
     margin-top: 48px;
+  }
+
+  .concept-center-tagline {
+    font-size: 26px;
   }
 }
