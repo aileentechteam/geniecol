@@ -1127,11 +1127,31 @@ img {
 .wish-button:hover .wish-button-smoke-back,
 .wish-button:hover .wish-button-smoke-mid,
 .wish-button:hover .wish-button-smoke-front {
-  opacity: 0.95;
+  opacity: 1;
+}
+
+.wish-button:hover .wish-button-smoke-back {
+  transform: translate3d(-10px, -6px, 0) rotate(-15deg) scale(1.12);
+}
+
+.wish-button:hover .wish-button-smoke-mid {
+  transform: translate3d(-14px, -8px, 0) rotate(-12deg) scale(1.12);
+}
+
+.wish-button:hover .wish-button-smoke-front {
+  transform: translate3d(-10px, -10px, 0) rotate(-11deg) scale(1.1);
 }
 
 .wish-button:hover .wish-button-glow {
-  opacity: 0.9;
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.wish-button:hover .wish-button-text {
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.95),
+    0 0 24px rgba(255,255,255,0.45),
+    0 0 42px rgba(255,255,255,0.18);
 }
 
 @keyframes wishSmokeOne {
