@@ -22,16 +22,13 @@ export default function WishButtonCanvas() {
     canvas.style.height = `${height}px`
     ctx.scale(dpr, dpr)
 
-    const plumeCount = 18
-    const particles = Array.from({ length: plumeCount }, (_, i) => ({
-      seed: i * 0.37 + 1,
-      offset: Math.random() * Math.PI * 2,
-      size: 18 + Math.random() * 24,
-      speed: 0.5 + Math.random() * 0.8,
-      drift: 18 + Math.random() * 28,
-      rise: 26 + Math.random() * 32,
-      alpha: 0.15 + Math.random() * 0.24,
-    }))
+    const plumes = [
+      { baseX: width - 34, baseY: height - 2, size: 20, rise: 42, drift: 20, speed: 1.1, alpha: 0.95, blur: 0 },
+      { baseX: width - 52, baseY: height + 2, size: 18, rise: 36, drift: 18, speed: 0.92, alpha: 0.82, blur: 1.5 },
+      { baseX: width - 20, baseY: height + 6, size: 16, rise: 30, drift: 14, speed: 0.82, alpha: 0.72, blur: 2.5 },
+      { baseX: width - 66, baseY: height + 8, size: 14, rise: 28, drift: 16, speed: 0.74, alpha: 0.58, blur: 4 },
+      { baseX: width - 12, baseY: height + 10, size: 12, rise: 24, drift: 12, speed: 0.68, alpha: 0.5, blur: 5 },
+    ]
 
     const drawRoundedRect = () => {
       const radius = 18
@@ -71,24 +68,31 @@ export default function WishButtonCanvas() {
       ctx.fillStyle = sideGlow
       ctx.fillRect(width - 180, -20, 220, 160)
 
-      particles.forEach((p, index) => {
-        const cycle = (time * p.speed + p.offset) % 1
-        const x = width - 28 - cycle * p.drift + Math.sin(time * 1.8 + p.seed) * 6
-        const y = height - 4 - cycle * p.rise + Math.cos(time * 1.2 + p.seed) * 3
-        const stretchX = p.size * (1.15 + cycle * 0.55)
-        const stretchY = p.size * (1.8 + cycle * 1.1)
+      plumes.forEach((p, index) => {
+        const phase = time * p.speed + index * 0.8
+        const flicker = (Math.sin(phase * 2.2) + 1) * 0.5
+        const x = p.baseX - flicker * p.drift + Math.sin(phase * 1.4) * 3
+        const y = p.baseY - flicker * p.rise + Math.cos(phase * 1.1) * 2
+        const stretchX = p.size * (0.62 + flicker * 0.18)
+        const stretchY = p.size * (1.8 + flicker * 1.35)
 
         ctx.save()
         ctx.translate(x, y)
-        ctx.rotate(-0.72 + Math.sin(time * 1.2 + index) * 0.08)
-        const g = ctx.createRadialGradient(0, 0, 0, 0, 0, stretchY)
-        g.addColorStop(0, `rgba(255,255,255,${0.78 * p.alpha + 0.12})`)
-        g.addColorStop(0.28, `rgba(242,242,242,${0.55 * p.alpha + 0.08})`)
-        g.addColorStop(0.5, `rgba(205,205,205,${0.24 * p.alpha + 0.04})`)
+        ctx.rotate(-0.62 + Math.sin(phase) * 0.08)
+        ctx.filter = `blur(${p.blur}px)`
+
+        const g = ctx.createRadialGradient(0, stretchY * 0.15, 0, 0, 0, stretchY)
+        g.addColorStop(0, `rgba(255,255,255,${0.95 * p.alpha})`)
+        g.addColorStop(0.22, `rgba(248,248,248,${0.75 * p.alpha})`)
+        g.addColorStop(0.48, `rgba(215,215,215,${0.34 * p.alpha})`)
         g.addColorStop(1, 'rgba(255,255,255,0)')
         ctx.fillStyle = g
+
         ctx.beginPath()
-        ctx.ellipse(0, 0, stretchX * 0.55, stretchY, 0, 0, Math.PI * 2)
+        ctx.moveTo(0, -stretchY)
+        ctx.bezierCurveTo(stretchX * 0.85, -stretchY * 0.62, stretchX * 0.95, stretchY * 0.1, 0, stretchY)
+        ctx.bezierCurveTo(-stretchX * 0.92, stretchY * 0.14, -stretchX * 0.82, -stretchY * 0.6, 0, -stretchY)
+        ctx.closePath()
         ctx.fill()
         ctx.restore()
       })
