@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #131415;
+  --text-muted: #9ba1a5;
+  --text-bright: #ffffff;
+  --font-primary: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-secondary: 'Cormorant Garamond', 'Iowan Old Style', 'Times New Roman', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  color: var(--text-muted);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.genie-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.genie-spline-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.genie-spline {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.genie-crest-wrap {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  z-index: 3;
+  width: 86px;
+  height: 64px;
+  transform: translateX(-50%);
+}
+
+.genie-crest {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.genie-logo-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: 222px;
+  height: 166px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genie-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.genie-footer {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  z-index: 4;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: pre;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.genie-email {
+  color: var(--text-bright);
+  text-decoration: none;
+}
+
+.genie-email:hover {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .genie-crest-wrap {
+    top: 48px;
+    width: 140px;
+    height: 104px;
+  }
+}
+
+@media (max-width: 809px) {
+  .genie-crest-wrap {
+    top: 48px;
+    width: 140px;
+    height: 104px;
+  }
+
+  .genie-logo-wrap {
+    top: 48.8151658768%;
+    width: 178px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+  }
+
+  .genie-footer {
+    width: calc(100vw - 32px);
+    white-space: normal;
+  }
+}
