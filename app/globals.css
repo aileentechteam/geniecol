@@ -1065,28 +1065,18 @@ img {
   position: relative;
   z-index: 2;
   font-family: 'Cormorant Garamond', 'Iowan Old Style', 'Times New Roman', serif;
-  font-size: 42px;
+  font-size: 40px;
+  font-weight: 500;
   line-height: 1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.055em;
   color: #fff;
   text-transform: lowercase;
+  text-align: center;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
   text-shadow:
-    0 0 8px rgba(255,255,255,0.9),
-    0 0 18px rgba(255,255,255,0.35),
-    0 0 32px rgba(255,255,255,0.14);
-}
-
-.wish-button-text {
-  font-family: 'Cormorant Garamond', 'Iowan Old Style', 'Times New Roman', serif;
-  font-size: 42px;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  color: #fff;
-  text-transform: lowercase;
-  text-shadow:
-    0 0 8px rgba(255,255,255,0.94),
-    0 0 18px rgba(255,255,255,0.34),
-    0 0 32px rgba(255,255,255,0.12);
+    0 0 2px rgba(255,255,255,0.92),
+    0 0 10px rgba(255,255,255,0.16);
 }
 
 
