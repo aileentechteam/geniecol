@@ -16,7 +16,9 @@ export default function WishButtonCanvas() {
         <source src="/assets/button-flame-loop.mp4" type="video/mp4" />
       </video>
       <div className="wish-button-video-grade" aria-hidden="true" />
-      <span className="wish-button-text wish-button-text-canvas">wish</span>
+      <div className="wish-button-text-layer" aria-hidden="true">
+        <span className="wish-button-text wish-button-text-canvas">wish</span>
+      </div>
     </div>
   )
 }

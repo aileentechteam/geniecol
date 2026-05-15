@@ -1035,6 +1035,9 @@ img {
 }
 
 .wish-button-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -1046,37 +1049,51 @@ img {
 .wish-button-video-grade {
   position: absolute;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.02) 32%, rgba(0,0,0,0.18) 100%),
-    radial-gradient(circle at 84% 56%, rgba(255,255,255,0.12), rgba(255,255,255,0.02) 18%, rgba(0,0,0,0) 42%);
+    linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02) 32%, rgba(0,0,0,0.22) 100%),
+    radial-gradient(circle at 84% 56%, rgba(255,255,255,0.1), rgba(255,255,255,0.02) 18%, rgba(0,0,0,0) 42%);
   mix-blend-mode: screen;
 }
 
-.wish-button-text-canvas {
+.wish-button-text-layer {
   position: absolute;
   inset: 0;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: none;
 }
+
+.wish-button-text-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
 .wish-button-text {
   position: relative;
-  z-index: 2;
+  display: inline-block;
+  padding: 0 0.08em 0.08em;
   font-family: 'Cormorant Garamond', 'Iowan Old Style', 'Times New Roman', serif;
-  font-size: 40px;
+  font-size: 44px;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.07em;
   color: #fff;
   text-transform: lowercase;
   text-align: center;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   text-shadow:
-    0 0 2px rgba(255,255,255,0.92),
-    0 0 10px rgba(255,255,255,0.16);
+    0 0 1px rgba(255,255,255,1),
+    0 0 6px rgba(255,255,255,0.28),
+    0 1px 10px rgba(0,0,0,0.55);
 }
 
 
