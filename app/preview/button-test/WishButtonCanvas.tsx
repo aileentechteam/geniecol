@@ -1,8 +1,16 @@
 'use client'
 
-export default function WishButtonCanvas() {
+type WishButtonCanvasProps = {
+  forceInverted?: boolean
+}
+
+export default function WishButtonCanvas({ forceInverted = false }: WishButtonCanvasProps) {
   return (
-    <div className="wish-button-canvas-shell">
+    <button
+      type="button"
+      className={`wish-button-canvas-shell${forceInverted ? ' is-inverted' : ''}`}
+      aria-label="wish"
+    >
       <video
         className="wish-button-video"
         autoPlay
@@ -19,6 +27,6 @@ export default function WishButtonCanvas() {
       <div className="wish-button-text-layer" aria-hidden="true">
         <span className="wish-button-text wish-button-text-canvas">wish</span>
       </div>
-    </div>
+    </button>
   )
 }
