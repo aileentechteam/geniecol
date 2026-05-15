@@ -1030,14 +1030,27 @@ img {
   height: 86px;
   border-radius: 18px;
   overflow: hidden;
+  background: #000;
   box-shadow: 0 16px 40px rgba(0,0,0,0.55);
 }
 
-.wish-button-canvas {
+.wish-button-video {
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 18px;
+  object-fit: cover;
+  transform: scale(1.08);
+  filter: contrast(1.08) brightness(0.95);
+}
+
+.wish-button-video-grade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.02) 32%, rgba(0,0,0,0.18) 100%),
+    radial-gradient(circle at 84% 56%, rgba(255,255,255,0.12), rgba(255,255,255,0.02) 18%, rgba(0,0,0,0) 42%);
+  mix-blend-mode: screen;
 }
 
 .wish-button-text-canvas {
