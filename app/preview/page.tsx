@@ -18,10 +18,10 @@ const experiments = [
     description: 'Side-by-side comparison of the reference image, original SVG, and thicker outline SVG.',
   },
   {
-    title: 'Wish button test',
+    title: 'Glitch button',
     status: 'Utility',
     path: '/preview/button-test',
-    description: 'Animated grayscale smoke button with slow luxurious motion.',
+    description: 'Animated grayscale glitch button with slow luxurious motion.',
   },
 ]
 
