@@ -1079,7 +1079,7 @@ img {
 .wish-button-text {
   position: relative;
   display: inline-block;
-  padding: 0 0.08em 0.08em;
+  transform: translateY(2px);
   font-family: 'Cormorant Garamond', 'Iowan Old Style', 'Times New Roman', serif;
   font-size: 44px;
   font-weight: 500;
