@@ -1078,8 +1078,9 @@ img {
 
 .wish-button-text {
   position: relative;
-  display: inline-block;
-  transform: translateY(2px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Cormorant Garamond', 'Iowan Old Style', 'Times New Roman', serif;
   font-size: 44px;
   font-weight: 500;
