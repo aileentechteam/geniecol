@@ -12,6 +12,12 @@ const experiments = [
     description: 'The lone non-centered outlier kept for comparison.',
   },
   {
+    title: 'Smoke rectangle mockup',
+    status: 'New',
+    path: '/preview/smoke-rectangle',
+    description: 'Concept image showing the smoke circle reshaped into a rectangle around the Genie Collective wordmark.',
+  },
+  {
     title: 'Crest test',
     status: 'Utility',
     path: '/preview/crest-test',

@@ -305,6 +305,50 @@ img {
   text-decoration: underline;
 }
 
+.smoke-mockup-shell {
+  min-height: 100vh;
+  padding: 40px 20px 56px;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(255, 255, 255, 0.06), transparent 20%),
+    #000;
+  color: #fff;
+}
+
+.smoke-mockup-header {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.smoke-mockup-title {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: clamp(40px, 5.2vw, 72px);
+  line-height: 1.02;
+  font-weight: 400;
+}
+
+.smoke-mockup-copy {
+  max-width: 680px;
+  margin: 18px auto 0;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.smoke-mockup-stage {
+  max-width: 1280px;
+  margin: 36px auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.smoke-mockup-image {
+  width: 100%;
+  height: auto;
+}
+
 .concept-shell {
   min-height: 100vh;
   padding: 32px 28px 48px;
