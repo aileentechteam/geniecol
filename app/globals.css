@@ -57,6 +57,17 @@ img {
   border: 0;
 }
 
+.genie-spline-badge-cover {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 260px;
+  height: 96px;
+  background: var(--bg);
+  pointer-events: none;
+}
+
 .genie-crest-wrap {
   position: absolute;
   top: 24px;
