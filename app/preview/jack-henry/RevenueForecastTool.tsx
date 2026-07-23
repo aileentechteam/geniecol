@@ -262,9 +262,6 @@ export default function RevenueForecastTool() {
   return (
     <main className="forecast-tool-shell">
       <div className="forecast-tool-wrap">
-        <a className="forecast-back-link" href="/preview">
-          Back to staging
-        </a>
         <h1>Bottlenecks: Jack Henry Forecast</h1>
         <p className="forecast-tool-sub">
           Aug-Jan baseline, scenario multipliers, MER-based ad spend, and AOV-derived orders. Adjust any field -
