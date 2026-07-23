@@ -2,6 +2,10 @@ import { NextResponse } from 'next/server'
 
 const PREVIEW_COOKIE = 'genie_preview_auth'
 
+function isAllowedNextPath(path: string) {
+  return path.startsWith('/preview') || path === '/jack-henry'
+}
+
 export async function POST(request: Request) {
   const formData = await request.formData()
   const password = String(formData.get('password') ?? '')
@@ -16,12 +20,12 @@ export async function POST(request: Request) {
     return NextResponse.redirect(new URL(`/preview/login?error=1&next=${encodeURIComponent(next)}`, request.url), 303)
   }
 
-  const response = NextResponse.redirect(new URL(next.startsWith('/preview') ? next : '/preview', request.url), 303)
+  const response = NextResponse.redirect(new URL(isAllowedNextPath(next) ? next : '/preview', request.url), 303)
   response.cookies.set(PREVIEW_COOKIE, configuredPassword, {
     httpOnly: true,
     sameSite: 'lax',
     secure: true,
-    path: '/preview',
+    path: '/',
     maxAge: 60 * 60 * 12,
   })
   return response

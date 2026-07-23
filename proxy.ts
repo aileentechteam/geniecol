@@ -6,7 +6,9 @@ const PREVIEW_COOKIE = 'genie_preview_auth'
 export function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl
 
-  if (!pathname.startsWith('/preview')) {
+  const isProtectedPath = pathname.startsWith('/preview') || pathname === '/jack-henry'
+
+  if (!isProtectedPath) {
     return NextResponse.next()
   }
 
@@ -31,5 +33,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/preview/:path*'],
+  matcher: ['/preview/:path*', '/jack-henry'],
 }

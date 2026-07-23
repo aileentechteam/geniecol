@@ -8,7 +8,8 @@ type LoginPageProps = {
 
 export default async function PreviewLoginPage({ searchParams }: LoginPageProps) {
   const params = await searchParams
-  const next = params.next && params.next.startsWith('/preview') ? params.next : '/preview'
+  const next =
+    params.next && (params.next.startsWith('/preview') || params.next === '/jack-henry') ? params.next : '/preview'
   const hasError = params.error === '1'
   const setupMissing = params.setup === '1'
 

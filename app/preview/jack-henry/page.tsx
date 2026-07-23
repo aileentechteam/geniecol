@@ -1,15 +1,5 @@
-import type { Metadata } from 'next'
-import RevenueForecastTool from './RevenueForecastTool'
+import { redirect } from 'next/navigation'
 
-export const metadata: Metadata = {
-  title: 'Jack Henry Seasonal Forecast | Genie Collective',
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-  },
-}
-
-export default function RevenueForecastPage() {
-  return <RevenueForecastTool />
+export default function OldJackHenryPreviewPage() {
+  redirect('/jack-henry')
 }

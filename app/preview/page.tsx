@@ -29,12 +29,6 @@ const experiments = [
     path: '/preview/button-test',
     description: 'Animated grayscale glitch button with slow luxurious motion.',
   },
-  {
-    title: 'Revenue forecast',
-    status: 'Private',
-    path: '/preview/jack-henry',
-    description: 'Interactive client-side model with editable inputs, live charts, and auto-calculating tables.',
-  },
 ]
 
 export default function PreviewIndexPage() {
