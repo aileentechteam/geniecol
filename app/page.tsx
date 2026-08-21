@@ -26,8 +26,6 @@ export default function HomePage() {
         </a>
         <br />© 2025 Genie Collective. All rights reserved.
       </footer>
-
-      <div className="genie-spline-badge-cover" aria-hidden="true" />
     </main>
   )
 }
